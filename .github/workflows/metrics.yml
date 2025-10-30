@@ -11,7 +11,13 @@ jobs:
       - name: Generate profile metrics
         uses: lowlighter/metrics@latest
         with:
+          # use your classic PAT (has repo scope incl. private)
           token: ${{ secrets.METRICS_TOKEN }}
+
+          # force it to commit back to main using that token
+          committer_token: ${{ secrets.METRICS_TOKEN }}
+          committer_branch: main
+          committer_message: "Update metrics.svg - [Skip GitHub Action]"
 
           # --- Who/General ---
           user: Ganainmtech
@@ -19,12 +25,11 @@ jobs:
           base: header, repositories
           config_timezone: UTC
 
-          # Include ALL repos (public + private)
-          repositories_visibility: all
-          repositories_affiliations: owner, collaborator, organization_member
-          repositories_forks: no 
+          # Repos to include
+          repositories_affiliations: owner,collaborator,organization_member
+          repositories_forks: no
 
-          # --- Languages "slider" panel ---
+          # --- Languages panel ---
           plugin_languages: yes
           plugin_languages_indepth: yes
           plugin_languages_details: percentage
@@ -33,9 +38,5 @@ jobs:
           plugin_languages_recent_load: 1000
           plugin_languages_analysis_timeout: 15
 
-          # Optional: ignore filetypes that skew results
-          # plugin_languages_ignored: >-
-          #   vendor, node_modules, dist, build
-
-          # Output file placed at repo root
+          # Output file
           filename: metrics.svg
