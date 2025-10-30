@@ -19,10 +19,10 @@ jobs:
           base: header, repositories
           config_timezone: UTC
 
-          # Include ALL repos you have access to (public + private)
+          # Include ALL repos (public + private)
           repositories_visibility: all
           repositories_affiliations: owner, collaborator, organization_member
-          repositories_forks: no  # set to "yes" if you want forks included
+          repositories_forks: no 
 
           # --- Languages "slider" panel ---
           plugin_languages: yes
