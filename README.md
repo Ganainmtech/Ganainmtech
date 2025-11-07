@@ -12,7 +12,6 @@ Currently focused on builder experience, education, and community/startup growth
 ---
 
 ### 📊 Languages by File Size  
-*(Updated automatically each day)*  
 
 ![Languages by file size](./metrics.svg)
 
