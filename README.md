@@ -1,7 +1,7 @@
 <div align="center">
 
 # Hey, I'm Sara Jane 👋  
-Junior Developer Community Advocate @ **Algorand Foundation**
+Technical Ecosystem Specialist @ **Algorand Foundation**
 
 </div>
 
